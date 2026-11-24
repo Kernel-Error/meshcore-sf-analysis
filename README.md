@@ -2,7 +2,7 @@
 
 Small Python tools to estimate what a MeshCore region switch from **SF8 to SF7** (869.618 MHz, 62.5 kHz) would mean, based on the link SNRs a [CoreScope](https://github.com/Kpa-clawbot/CoreScope) instance has observed. It was written for the Rheinland region in Germany, but it works with any CoreScope `packets-expanded` day archive.
 
-Background and the results for Rheinland are in the blog post (German): [FILL: link to the blog post]
+Background and the results for Rheinland are in the blog post (German): [MeshCore auf SF7 umstellen? Was die Daten aus dem Rheinland sagen](https://www.kernel-error.de/2026/11/24/meshcore-sf7-oder-sf8-daten-rheinland/)
 
 ## What it does
 
