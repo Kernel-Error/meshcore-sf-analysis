@@ -1,0 +1,435 @@
+{
+ "terms": "'SF8 percentile' = 0.5th percentile of decoded SF8 copies (descriptive, not a demodulation limit).\n'SF7 scenario' = that percentile + 2.5 dB (nominal Semtech step; +3 dB sensitivity); -7.5 dB = datasheet reference.\nShares are THRESHOLD EXPOSURE of today's receipts in a frozen hard-threshold model, not a delivery forecast:\npackets SF8 never decoded are invisible, and a real switch also changes interference, retries and forwarding.\nEqual link SNR at SF7/SF8 and equal CR sensitivity are modelling assumptions. ALOHA ignores LBT, capture,\nhidden nodes, retries and correlated flood starts; it is a relative illustration only.",
+ "sf8_p0_5_db": -12.5,
+ "floor_quantile": 0.005,
+ "thresholds": {
+  "sf7_scenario": -10.0,
+  "sf7_plus3": -9.5,
+  "datasheet": -7.5
+ },
+ "snr_quantiles_attributed": {
+  "0.005": -12.5,
+  "0.01": -12.0,
+  "0.05": -10.25,
+  "0.1": -8.5,
+  "0.5": 4.75
+ },
+ "configs": [
+  {
+   "label": "SF6/CR5",
+   "sf": 6,
+   "bw": 62500,
+   "cr": 5,
+   "note": null,
+   "airtime_ms": 221.4,
+   "airtime_rel": 0.214,
+   "snr_limit_db": -5,
+   "sensitivity_dbm": -125.0,
+   "budget_vs_ref_db": -5.0
+  },
+  {
+   "label": "SF7/CR5",
+   "sf": 7,
+   "bw": 62500,
+   "cr": 5,
+   "note": null,
+   "airtime_ms": 397.8,
+   "airtime_rel": 0.385,
+   "snr_limit_db": -7.5,
+   "sensitivity_dbm": -127.5,
+   "budget_vs_ref_db": -2.5
+  },
+  {
+   "label": "SF7/CR8",
+   "sf": 7,
+   "bw": 62500,
+   "cr": 8,
+   "note": null,
+   "airtime_ms": 582.1,
+   "airtime_rel": 0.563,
+   "snr_limit_db": -7.5,
+   "sensitivity_dbm": -127.5,
+   "budget_vs_ref_db": -2.5
+  },
+  {
+   "label": "SF8/CR5",
+   "sf": 8,
+   "bw": 62500,
+   "cr": 5,
+   "note": null,
+   "airtime_ms": 713.7,
+   "airtime_rel": 0.691,
+   "snr_limit_db": -10,
+   "sensitivity_dbm": -130.0,
+   "budget_vs_ref_db": 0.0
+  },
+  {
+   "label": "SF8/CR8",
+   "sf": 8,
+   "bw": 62500,
+   "cr": 8,
+   "note": null,
+   "airtime_ms": 1033.2,
+   "airtime_rel": 1.0,
+   "snr_limit_db": -10,
+   "sensitivity_dbm": -130.0,
+   "budget_vs_ref_db": 0.0
+  },
+  {
+   "label": "SF9/CR5",
+   "sf": 9,
+   "bw": 62500,
+   "cr": 5,
+   "note": null,
+   "airtime_ms": 1173.5,
+   "airtime_rel": 1.136,
+   "snr_limit_db": -12.5,
+   "sensitivity_dbm": -132.5,
+   "budget_vs_ref_db": 2.5
+  },
+  {
+   "label": "SF9/CR8",
+   "sf": 9,
+   "bw": 62500,
+   "cr": 8,
+   "note": null,
+   "airtime_ms": 1738.8,
+   "airtime_rel": 1.683,
+   "snr_limit_db": -12.5,
+   "sensitivity_dbm": -132.5,
+   "budget_vs_ref_db": 2.5
+  },
+  {
+   "label": "SF10/CR5",
+   "sf": 10,
+   "bw": 62500,
+   "cr": 5,
+   "note": null,
+   "airtime_ms": 2592.8,
+   "airtime_rel": 2.509,
+   "snr_limit_db": -15,
+   "sensitivity_dbm": -135.0,
+   "budget_vs_ref_db": 5.0
+  },
+  {
+   "label": "SF8/CR5 125k",
+   "sf": 8,
+   "bw": 125000,
+   "cr": 5,
+   "note": "band",
+   "airtime_ms": 356.9,
+   "airtime_rel": 0.345,
+   "snr_limit_db": -10,
+   "sensitivity_dbm": -127.0,
+   "budget_vs_ref_db": -3.0
+  },
+  {
+   "label": "SF7/CR5 31k",
+   "sf": 7,
+   "bw": 31250,
+   "cr": 5,
+   "note": "clock",
+   "airtime_ms": 795.6,
+   "airtime_rel": 0.77,
+   "snr_limit_db": -7.5,
+   "sensitivity_dbm": -130.6,
+   "budget_vs_ref_db": 0.5
+  }
+ ],
+ "meta": {
+  "observations": 14943049,
+  "receipts_obs": 14762559,
+  "used": 14235128,
+  "deliveries": 5820706,
+  "skip_unknown_tx": 410726,
+  "skip_direct_or_trace": 115474,
+  "bad_hop": 1231,
+  "no_snr": 2742,
+  "radio_unknown": 155326,
+  "not_rx": 19711,
+  "radio_other": 2711,
+  "files": 18
+ },
+ "decoded_rx_1863": {
+  "days": 12,
+  "min": 0.2116704673048652,
+  "median": 0.22970980384544137,
+  "max": 0.23675839492891929,
+  "tx_min": 0.03149524272518925,
+  "tx_max": 0.04853409852645443,
+  "note": "decoded RX airtime estimated by the firmware with its own CR5; not RF occupancy, not offered load",
+  "per_day": {
+   "2026-11-12": {
+    "rx_share": 0.22770435975219963,
+    "tx_share": 0.04422515894324535,
+    "hours": 23.899166666666666
+   },
+   "2026-11-13": {
+    "rx_share": 0.2317152479386831,
+    "tx_share": 0.04375798397398676,
+    "hours": 23.919444444444444
+   },
+   "2026-11-14": {
+    "rx_share": 0.23242094505928396,
+    "tx_share": 0.03425810872014028,
+    "hours": 23.919722222222223
+   },
+   "2026-11-15": {
+    "rx_share": 0.2323125537303376,
+    "tx_share": 0.03999860591556495,
+    "hours": 23.910555555555554
+   },
+   "2026-11-16": {
+    "rx_share": 0.22526912837133928,
+    "tx_share": 0.03316356059729135,
+    "hours": 23.997222222222224
+   },
+   "2026-11-17": {
+    "rx_share": 0.21525760587066198,
+    "tx_share": 0.04853409852645443,
+    "hours": 23.620277777777776
+   },
+   "2026-11-18": {
+    "rx_share": 0.2116704673048652,
+    "tx_share": 0.0336616930396231,
+    "hours": 23.996944444444445
+   },
+   "2026-11-19": {
+    "rx_share": 0.2162446891026754,
+    "tx_share": 0.033075168733141154,
+    "hours": 23.99416666666667
+   },
+   "2026-11-20": {
+    "rx_share": 0.22177178408651538,
+    "tx_share": 0.03472799915640488,
+    "hours": 23.708055555555557
+   },
+   "2026-11-21": {
+    "rx_share": 0.23237724842002916,
+    "tx_share": 0.03149524272518925,
+    "hours": 23.998333333333335
+   },
+   "2026-11-22": {
+    "rx_share": 0.23675839492891929,
+    "tx_share": 0.032550230766561404,
+    "hours": 24.014166666666668
+   },
+   "2026-11-23": {
+    "rx_share": 0.23233083577491864,
+    "tx_share": 0.031568829544533356,
+    "hours": 23.98638888888889
+   }
+  }
+ },
+ "areas": {
+  "Todenfeld ≤ 15 km": {
+   "observers": 1,
+   "observer_names": [
+    "DE-NW-SU Villiprott Obv"
+   ],
+   "copies": 316273,
+   "receipts": 96071,
+   "receipt_exposure": {
+    "sf7_scenario": 0.02360754025668516,
+    "sf7_plus3": 0.03150794724734832,
+    "datasheet": 0.06391106577427111
+   },
+   "copy_exposure": {
+    "sf7_scenario": 0.06315746206599994,
+    "datasheet": 0.18435971455040423
+   },
+   "equal_observer_sf7_scenario": {
+    "mean": 0.02360754025668516,
+    "min": 0.02360754025668516,
+    "max": 0.02360754025668516,
+    "n": 1
+   }
+  },
+  "Rheinland ≤ 60 km": {
+   "observers": 19,
+   "observer_names": null,
+   "copies": 3789891,
+   "receipts": 1517138,
+   "receipt_exposure": {
+    "sf7_scenario": 0.012424710210936645,
+    "sf7_plus3": 0.016699206004990978,
+    "datasheet": 0.03483862377713827
+   },
+   "copy_exposure": {
+    "sf7_scenario": 0.04119300528695944,
+    "datasheet": 0.11075595577814772
+   },
+   "equal_observer_sf7_scenario": {
+    "mean": 0.014690925331383092,
+    "min": 0.0,
+    "max": 0.10346834829008004,
+    "n": 19
+   }
+  },
+  "alle Beobachter": {
+   "observers": 65,
+   "observer_names": null,
+   "copies": 14235128,
+   "receipts": 5820706,
+   "receipt_exposure": {
+    "sf7_scenario": 0.017805572038855768,
+    "sf7_plus3": 0.022731778584934543,
+    "datasheet": 0.0424479435999688
+   },
+   "copy_exposure": {
+    "sf7_scenario": 0.0530432884059771,
+    "datasheet": 0.12900228224150848
+   },
+   "equal_observer_sf7_scenario": {
+    "mean": 0.023801874017197903,
+    "min": 0.0,
+    "max": 0.2968976021510866,
+    "n": 65
+   }
+  }
+ },
+ "observers_without_position": 15,
+ "observers_total": 65,
+ "resolution_strict": {
+  "resolved": 10886973,
+  "unresolved": 3344761,
+  "full_key_not_in_catalogue": 3394
+ },
+ "resolution_heuristic": {
+  "resolved": 12225708,
+  "unresolved": 2006026,
+  "full_key_not_in_catalogue": 3394
+ },
+ "links": {
+  "rule": "directed transmitter->observer, both positions known, n >= 20 attributed copies",
+  "strict_all": {
+   "links": 802,
+   "ge10": 399,
+   "share": 0.4975062344139651
+  },
+  "strict_rx60": {
+   "links": 380,
+   "ge10": 153,
+   "share": 0.4026315789473684
+  },
+  "heuristic_all": {
+   "links": 853,
+   "ge10": 434,
+   "share": 0.5087924970691676
+  },
+  "strict_all_plus3": {
+   "links": 802,
+   "ge10": 461,
+   "share": 0.5748129675810474
+  },
+  "strict_all_datasheet": {
+   "links": 802,
+   "ge10": 569,
+   "share": 0.7094763092269327
+  },
+  "distance_classes_strict": [
+   {
+    "bin": "0–2 km",
+    "links": 100,
+    "ok": 92,
+    "degraded": 6,
+    "lost": 2,
+    "obs_share": 0.012220946619085682
+   },
+   {
+    "bin": "2–10 km",
+    "links": 254,
+    "ok": 132,
+    "degraded": 64,
+    "lost": 58,
+    "obs_share": 0.06416160687076654
+   },
+   {
+    "bin": "10–20 km",
+    "links": 206,
+    "ok": 122,
+    "degraded": 45,
+    "lost": 39,
+    "obs_share": 0.0581697105871412
+   },
+   {
+    "bin": "20–40 km",
+    "links": 203,
+    "ok": 97,
+    "degraded": 54,
+    "lost": 52,
+    "obs_share": 0.07796281718864145
+   },
+   {
+    "bin": "40–80 km",
+    "links": 139,
+    "ok": 52,
+    "degraded": 52,
+    "lost": 35,
+    "obs_share": 0.1458115676771168
+   }
+  ],
+  "distance_classes_strict_datasheet": [
+   {
+    "bin": "0–2 km",
+    "links": 100,
+    "ok": 88,
+    "degraded": 5,
+    "lost": 7,
+    "obs_share": 0.03039099781263312
+   },
+   {
+    "bin": "2–10 km",
+    "links": 254,
+    "ok": 87,
+    "degraded": 56,
+    "lost": 111,
+    "obs_share": 0.16781786803500628
+   },
+   {
+    "bin": "10–20 km",
+    "links": 206,
+    "ok": 75,
+    "degraded": 54,
+    "lost": 77,
+    "obs_share": 0.1712182356914242
+   },
+   {
+    "bin": "20–40 km",
+    "links": 203,
+    "ok": 51,
+    "degraded": 59,
+    "lost": 93,
+    "obs_share": 0.20020369939822524
+   },
+   {
+    "bin": "40–80 km",
+    "links": 139,
+    "ok": 20,
+    "degraded": 46,
+    "lost": 73,
+    "obs_share": 0.32078584165337815
+   }
+  ],
+  "beyond_80km": 12
+ },
+ "neigh_1863": {
+  "neighbours": 93,
+  "samples": 3043,
+  "with_position": 82,
+  "singletons": 13,
+  "samples_below": {
+   "sf7_scenario": 0.030890568517909958,
+   "datasheet": 0.06473874465987513
+  },
+  "medians_below": {
+   "sf7_scenario": 4,
+   "datasheet": 7
+  },
+  "dedup": "global over all logs; same (id, snr) within 150 s = same advert; cutoff on heard time"
+ },
+ "coverage": {
+  "observers_plotted": 50,
+  "repeater_coordinates": 3077
+ }
+}
